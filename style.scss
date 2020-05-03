@@ -1,0 +1,46 @@
+@mixin ring ($width, $color) {
+  height: $width;
+  width: $width;
+  border-radius: 50%;
+  border: pow($width, 10) solid $color;
+  box-shadow: 0px 0px 10px $color;
+}
+
+@function pow($base, $exponent) {
+ $result: $base / $exponent;
+  @return $result;
+}
+
+@for $i from 1 through 6 {
+  .ring-scale:nth-child(#{$i}) {
+    transform: scale($i / 5);
+  }
+}
+
+.ring-1 {
+  @include ring(80px, #FF8C00);
+  margin: 20px;
+}
+
+.ring-2 {
+  @include ring(200px, #e0c30b);
+  margin: 20px;
+}
+
+.ring-scale {
+  @include ring(100px, #000);
+}
+
+.container-ring,
+.container-main-rig,
+.ring-loop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
