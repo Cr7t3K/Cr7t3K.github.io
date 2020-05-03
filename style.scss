@@ -1,3 +1,7 @@
+$orange : #FF8C00;
+$yellow : #e0c30b;
+$black : #000;
+
 @mixin ring ($width, $color) {
   height: $width;
   width: $width;
@@ -12,12 +16,12 @@
 }
 
 .ring-1 {
-  @include ring(80px, #FF8C00);
+  @include ring(80px, $orange);
   margin: 20px;
 }
 
 .ring-2 {
-  @include ring(200px, #e0c30b);
+  @include ring(200px, $yellow);
   margin: 20px;
 }
 
@@ -41,7 +45,7 @@ p {
   $size-ring : 30px;
   @for $i from 1 through 6 {
     .ring-scale:nth-child(#{$i}) {
-      @include ring($size-ring, #000);
+      @include ring($size-ring, $black);
       margin: 0;
       margin-left: -20px;
     }
