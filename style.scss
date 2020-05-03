@@ -7,14 +7,8 @@
 }
 
 @function pow($base, $exponent) {
- $result: $base / $exponent;
+  $result: $base / $exponent;
   @return $result;
-}
-
-@for $i from 1 through 6 {
-  .ring-scale:nth-child(#{$i}) {
-    transform: scale($i / 5);
-  }
 }
 
 .ring-1 {
@@ -27,13 +21,8 @@
   margin: 20px;
 }
 
-.ring-scale {
-  @include ring(100px, #000);
-}
-
 .container-ring,
-.container-main-rig,
-.ring-loop {
+.container-main-rig{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,4 +32,19 @@ p {
   font-size: 40px;
   font-weight: bold;
   text-align: center;
+}
+
+.ring-loop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  $size-ring : 30px;
+  @for $i from 1 through 6 {
+    .ring-scale:nth-child(#{$i}) {
+      @include ring($size-ring, #000);
+      margin: 0;
+      margin-left: -20px;
+    }
+    $size-ring : $size-ring + 10;
+  }
 }

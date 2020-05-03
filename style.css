@@ -1,27 +1,3 @@
-.ring-scale:nth-child(1) {
-    transform: scale(0.2);
-}
-
-.ring-scale:nth-child(2) {
-    transform: scale(0.4);
-}
-
-.ring-scale:nth-child(3) {
-    transform: scale(0.6);
-}
-
-.ring-scale:nth-child(4) {
-    transform: scale(0.8);
-}
-
-.ring-scale:nth-child(5) {
-    transform: scale(1);
-}
-
-.ring-scale:nth-child(6) {
-    transform: scale(1.2);
-}
-
 .ring-1 {
     height: 80px;
     width: 80px;
@@ -40,17 +16,8 @@
     margin: 20px;
 }
 
-.ring-scale {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: 10px solid #000;
-    box-shadow: 0px 0px 10px #000;
-}
-
 .container-ring,
-.container-main-rig,
-.ring-loop {
+.container-main-rig {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,4 +27,64 @@ p {
     font-size: 40px;
     font-weight: bold;
     text-align: center;
+}
+
+.ring-loop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ring-loop .ring-scale:nth-child(1) {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    box-shadow: 0px 0px 10px #000;
+    margin: 0;
+    margin-left: -20px;
+}
+.ring-loop .ring-scale:nth-child(2) {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 4px solid #000;
+    box-shadow: 0px 0px 10px #000;
+    margin: 0;
+    margin-left: -20px;
+}
+.ring-loop .ring-scale:nth-child(3) {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 5px solid #000;
+    box-shadow: 0px 0px 10px #000;
+    margin: 0;
+    margin-left: -20px;
+}
+.ring-loop .ring-scale:nth-child(4) {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 6px solid #000;
+    box-shadow: 0px 0px 10px #000;
+    margin: 0;
+    margin-left: -20px;
+}
+.ring-loop .ring-scale:nth-child(5) {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 7px solid #000;
+    box-shadow: 0px 0px 10px #000;
+    margin: 0;
+    margin-left: -20px;
+}
+.ring-loop .ring-scale:nth-child(6) {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 8px solid #000;
+    box-shadow: 0px 0px 10px #000;
+    margin: 0;
+    margin-left: -20px;
 }
